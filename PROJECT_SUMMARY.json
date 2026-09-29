@@ -1,0 +1,52 @@
+{
+  "project_name": "Bayan NLP Project",
+  "author": "Shuruq Alotaibi",
+  "scope": "Bilingual Arabic-English NLP system",
+  "language_support": [
+    "Arabic",
+    "English"
+  ],
+  "tasks": [
+    "Text Preparation and Arabic Processing",
+    "Attention and Transformer Architecture",
+    "Topic Classification",
+    "Sentiment Classification",
+    "Named Entity Recognition",
+    "Extractive Question Answering",
+    "Bilingual Semantic Search",
+    "Evaluation and Error Analysis",
+    "Model Optimization and Serving"
+  ],
+  "retrieval": {
+    "index": "FAISS",
+    "recall_at_3": 1.0,
+    "mrr_at_3_before_reranking": 0.6667,
+    "mrr_at_3_after_reranking": 0.7222,
+    "cross_lingual_test": "PASS",
+    "no_answer_test": "PASS"
+  },
+  "ner": {
+    "entity_precision": 0.1111,
+    "entity_recall": 0.25,
+    "entity_f1": 0.1538
+  },
+  "optimization": {
+    "artifact": "PROJECT_ARTIFACT",
+    "pytorch_p95_ms": 340.96,
+    "onnx_fp32_p95_ms": 653.25,
+    "onnx_int8_p95_ms": 145.59,
+    "int8_speedup": 2.34,
+    "prediction_agreement": 1.0,
+    "quality_tax_percent": 0.0
+  },
+  "service_tests": {
+    "arabic_input": "PASS",
+    "english_input": "PASS",
+    "invalid_input": "PASS"
+  },
+  "limitations": [
+    "NER performance is limited by the small training dataset.",
+    "QA no-answer handling requires further calibration.",
+    "ONNX FP32 did not improve latency in the tested environment."
+  ]
+}
