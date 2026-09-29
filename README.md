@@ -1,1 +1,1 @@
-# ShuruqAlotaibi-NLP-Bayan
+# Bayan_NLP_ShuruqAlotaibi
